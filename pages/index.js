@@ -354,9 +354,84 @@ export default function Home() {
             <div className='rounded-full text-gray-600 tracking-widest p-2 bg-gray-100 mt-2 font-semibold'>
               <h3>FEATURE DETAILS</h3>
             </div>
-            {/* summary */}
-            <div></div>
           </div>
+        </div>
+        {/* summary */}
+        <div className='mt-6 px-4  w-full'>
+          <h6>Summon</h6>
+          <div className='mt-6 '>
+            <h6 className='font-semibold text-2xl tracking-wide'>
+              Full Self-Driving Capability
+            </h6>
+            <h6 className='text-center mt-1'>$10,600</h6>
+          </div>
+          <ul className='px-6 lit-inside list-disc mt-4 text-gray-500 text-sm tracking-wide'>
+            <li className='p-1'>Navigate on Autopilot</li>
+            <li className='p-1'>Auto Lane Change</li>
+            <li className='p-1'>Autopark</li>
+            <li className='p-1'>Summon</li>
+            <li className='p-1'>Full Sefk-Driving Computer</li>
+            <li className='p-1'>Traffic Light and Stop Sign Control</li>
+          </ul>
+          <div className='mt-6'>
+            <h5 className=' mb-4'>Comming later this year</h5>
+            <ul className='px-6 lit-inside list-disc mt-4 text-gray-500 text-sm tracking-wide'>
+              <li className='p-1'>Autosteer on city streets</li>
+            </ul>
+            <span className='mt-6 text-xs text-gray-500 text-justify'>
+              The currently enabled features require active driver supervision
+              and do not make the vehicle autonomous. The activation and use of
+              these features are dependent on achieving reliability far in
+              excess of human drivers as demonstrated by billions of miles of
+              experience, as well as regulatory approval, which may take longer
+              in some jurisdictions. As these self-driving features evolve, your
+              car will be continuously upgraded through over-the-air software
+              updates.
+            </span>
+            <div className='mt-6 flex w-full justify-between'>
+              <div className='h-5 bg-blue-700 text-white rounded-full py-4  flex justify-center  w-2/4'>
+                <h5>ADD</h5>
+              </div>
+              <div className='h-5 bg-gray-200 ml-4  rounded-full py-4  flex justify-center  w-2/4'>
+                <h5>FEATURE DETAILS</h5>
+              </div>
+            </div>
+            <div className='mt-12 pb-32'>
+              <h5 className='text-center font-semibold text-2xl'>
+                Order Your Model 3
+              </h5>
+              <h6 className='text-center mt-2 text-sm font-medium'>
+                Estimated Delivery: 4-11 Weeks
+              </h6>
+              <div className='h-5  text-sm bg-blue-700 mt-4 text-white rounded-full py-5  flex justify-center  w-full tracking-wide'>
+                <h5>CONTINUE TO PAYMENT</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='bg-gray-100 rounded-t-2xl flex   px-4 pt-4 h-16 fixed bottom-0 w-full'>
+        <div className='bg-white w-8 h-8 px-2 rounded-full shadow-md '>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            className='w-full h-full'
+            fill='none'
+            viewBox='0 0 24 24'
+            stroke='currentColor'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M5 15l7-7 7 7'
+            />
+          </svg>
+        </div>
+        <div className='flex-1 ml-2 text-sm mb-6 mt-4'>
+          <h5 className='text-center'>$57,590 Purchase price</h5>
+          <h5 className='text-center text-gray-500'>
+            $11,700 Potential savings over 6 years
+          </h5>
         </div>
       </div>
     </div>
