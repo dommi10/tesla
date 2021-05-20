@@ -1,12 +1,35 @@
 import Head from 'next/head';
+import { useState } from 'react';
 import Image from 'next/image';
 
+const images = [
+  [
+    '/images/image01.jpg',
+    '/images/image02.jpg',
+    '/images/image03.jpg',
+    '/images/image04.jpg',
+    '/images/image05.jpg',
+  ],
+  [
+    '/images/image1.jpg',
+    '/images/image2.jpg',
+    '/images/image3.jpg',
+    '/images/image4.jpg',
+    '/images/image5.jpg',
+  ],
+];
+
 export default function Home() {
+  const [{ activeColor, activeImage }, setactiveImage] = useState({
+    activeColor: 0,
+    activeImage: 0,
+  });
   return (
-    <div className='bg-white min-h-full min-w-full'>
+    <div className='bg-white min-h-full min-w-full flex flex-col'>
       <Head>
-        <title>Design Your Model 3</title>
+        <title>Design Your Model 3 | Tesla</title>
       </Head>
+      {/* header */}
       <div className='h-3 pl-2  pr-6 pt-6 w-full flex justify-items-center justify-between'>
         <div className='h-full w-2/4'>
           <svg
@@ -39,6 +62,45 @@ export default function Home() {
           <div>
             <h6 className='font-bold pl-1'>CD</h6>
           </div>
+        </div>
+      </div>
+      {/* body */}
+      <div className='p-2 mt-8'>
+        {/* hero image */}
+        <div style={{ height: '150px', position: 'relative', width: '100%' }}>
+          <Image
+            src={images[activeColor][activeImage]}
+            alt='Picture of presentation'
+            layout='fill'
+            objectFit='none'
+            quality={100}
+          />
+        </div>
+        {/* Text Presentation */}
+        <div className='mt-6 w-full flex flex-col'>
+          {/* car name and puchase */}
+          <div className='flex flex-col w-full justify-center items-center justify-items-center'>
+            <div className='flex flex-col w-full justify-center items-center justify-items-center'>
+              <h1 className='tracking-tight font-medium text-3xl'>Model 3</h1>
+              <h3 className='pt-2 text-gray-500  text-base'>
+                Estimated Delivery: 4-11 weeks
+              </h3>
+            </div>
+            <div className='bg-gray-200 bg-opacity-60 py-1.5 pl-2 rounded-full h-12 mt-4 flex justify-between justify-items-center  w-11/12 '>
+              <div className='h-full flex justify-center items-center w-1/2 bg-white rounded-full shadow-md'>
+                <h6 className='text-gray-500 tracking-wider text-xs font-semibold'>
+                  Purchase Price
+                </h6>
+              </div>
+              <div className='h-full flex justify-center items-center w-1/2 '>
+                <h6 className='text-gray-500 tracking-widest text-xs font-semibold'>
+                  Potential savings*
+                </h6>
+              </div>
+            </div>
+          </div>
+          {/* kilometers */}
+          <div className='flex w-full mt-6 px-8'></div>
         </div>
       </div>
     </div>
