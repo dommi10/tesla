@@ -389,10 +389,10 @@ export default function Home() {
               updates.
             </span>
             <div className='mt-6 flex w-full justify-between'>
-              <div className='h-5 bg-blue-700 text-white rounded-full py-4  flex justify-center  w-2/4'>
+              <div className=' bg-blue-700 text-white rounded-full h-6 pt-4 pb-8 flex justify-center  w-2/4'>
                 <h5>ADD</h5>
               </div>
-              <div className='h-5 bg-gray-200 ml-4  rounded-full py-4  flex justify-center  w-2/4'>
+              <div className='h-6 pt-4 pb-8 bg-gray-200 ml-4  rounded-full  flex justify-center  w-2/4'>
                 <h5>FEATURE DETAILS</h5>
               </div>
             </div>
@@ -403,7 +403,7 @@ export default function Home() {
               <h6 className='text-center mt-2 text-sm font-medium'>
                 Estimated Delivery: 4-11 Weeks
               </h6>
-              <div className='h-5  text-sm bg-blue-700 mt-4 text-white rounded-full py-5  flex justify-center  w-full tracking-wide'>
+              <div className='h-6 pt-4 pb-8 text-sm bg-blue-700 mt-4 text-white rounded-full  flex justify-center  w-full tracking-wide'>
                 <h5>CONTINUE TO PAYMENT</h5>
               </div>
             </div>
@@ -427,7 +427,7 @@ export default function Home() {
             />
           </svg>
         </div>
-        <div className='flex-1 ml-2 text-sm mb-6 mt-4'>
+        <div className='flex-1 ml-2 text-sm mb-6 '>
           <h5 className='text-center'>$57,590 Purchase price</h5>
           <h5 className='text-center text-gray-500'>
             $11,700 Potential savings over 6 years
