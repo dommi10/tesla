@@ -25,7 +25,7 @@ export default function Home() {
     activeImage: 0,
   });
   return (
-    <div className='bg-white min-h-full min-w-full flex flex-col overflow-y-auto'>
+    <div className='bg-white min-h-full min-w-full flex flex-col '>
       <Head>
         <title>Design Your Model 3 | Tesla</title>
       </Head>
@@ -100,7 +100,7 @@ export default function Home() {
             </div>
           </div>
           {/* kilometers */}
-          <div className='grid grid-cols-3 gap-6 h-4 w-full mt-10 px-8'>
+          <div className='grid mb-10 grid-cols-3 gap-6 h-4 w-full mt-10 px-8'>
             <div className='grid grid-rows-2 gap-1'>
               <div className='flex justify-items-center items-center justify-center'>
                 <h2 className='font-semibold text-3xl'>423</h2>
@@ -128,6 +128,52 @@ export default function Home() {
               </div>
               <div className='flex justify-center '>
                 <h6 className='text-sm text-gray-400 font-thin'>0-100 km/h</h6>
+              </div>
+            </div>
+          </div>
+          {/* prices */}
+
+          <div className='flex mt-14 pl-4 pr-2 w-full flex-col'>
+            <div className='flex flex-col'>
+              <h3 className='text-gray-400 font-medium'>Rear-Wheel Drive</h3>
+              <div className='flex font-semibold text-sm opacity-90 align-center  justify-between py-4 px-6 mt-4 ring ring-blue-500 rounded-full'>
+                <h6>Standard Range Plus</h6>
+                <h6>$52,990</h6>
+              </div>
+              <div className='mt-4 w-full text-sm text-gray-400 font-medium flex'>
+                <a href='/' className='underline'>
+                  Learn more
+                </a>
+                <h3 className='pl-1'>about Range and Perfomance</h3>
+              </div>
+              <div className='mt-4 flex'>
+                <input type='checkbox' className='p-3 rounded-md' />
+                <h3 className='pl-3 text-gray-500 font-medium'>
+                  Limit to 151 km range (est.)
+                </h3>
+              </div>
+              <h3 className='text-gray-500 font-medium mt-6'>
+                Dual Motor All-Wheel Drive
+              </h3>
+              <div className='flex font-semibold text-sm text-gray-500 align-center  justify-between py-4 px-6 mt-4 border border-gray-400 rounded-full'>
+                <h6>Long Range</h6>
+                <h6>$64,990</h6>
+              </div>
+              <div className='flex font-semibold text-sm text-gray-500 align-center  justify-between py-4 px-6 mt-4 border border-gray-400 rounded-full'>
+                <h6>Performance</h6>
+                <h6>$74,990</h6>
+              </div>
+              <div className='flex flex-col w-full text-sm items-center justify-center'>
+                <h3 className='mt-4 text-xs text-center text-gray-400'>
+                  All prices are shown without potential incentives or savings
+                  of $11,700
+                </h3>
+                <a href='/' className='underline text-gray-500'>
+                  Learn More
+                </a>
+                <div className='rounded-full text-gray-600 tracking-widest p-2 bg-gray-100 mt-4 font-semibold'>
+                  <h3>FEATURE DETAILS</h3>
+                </div>
               </div>
             </div>
           </div>
