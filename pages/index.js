@@ -25,7 +25,7 @@ export default function Home() {
     activeImage: 0,
   });
   return (
-    <div className='bg-white min-h-full min-w-full flex flex-col'>
+    <div className='bg-white min-h-full min-w-full flex flex-col overflow-y-auto'>
       <Head>
         <title>Design Your Model 3 | Tesla</title>
       </Head>
@@ -100,7 +100,37 @@ export default function Home() {
             </div>
           </div>
           {/* kilometers */}
-          <div className='flex w-full mt-6 px-8'></div>
+          <div className='grid grid-cols-3 gap-6 h-4 w-full mt-10 px-8'>
+            <div className='grid grid-rows-2 gap-1'>
+              <div className='flex justify-items-center items-center justify-center'>
+                <h2 className='font-semibold text-3xl'>423</h2>
+                <h6 className='font-medium'>km</h6>
+              </div>
+              <div className='flex justify-center '>
+                <h6 className='text-sm text-gray-400 font-thin'>
+                  Range (est. )
+                </h6>
+              </div>
+            </div>
+            <div className='grid grid-rows-2 gap-1'>
+              <div className='flex justify-items-center items-center justify-center'>
+                <h2 className='font-semibold text-3xl'>225</h2>
+                <h6 className='font-medium'>km/h</h6>
+              </div>
+              <div className='flex justify-center '>
+                <h6 className='text-sm text-gray-400 font-thin'>Top Speed</h6>
+              </div>
+            </div>
+            <div className='grid grid-rows-2 gap-1'>
+              <div className='flex justify-items-center items-center justify-center'>
+                <h2 className='font-semibold text-3xl'>5.6</h2>
+                <h6 className='font-medium'>s</h6>
+              </div>
+              <div className='flex justify-center '>
+                <h6 className='text-sm text-gray-400 font-thin'>0-100 km/h</h6>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
