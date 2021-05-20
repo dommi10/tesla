@@ -1,5 +1,4 @@
 module.exports = {
-  mode: 'jit',
   purge: [
     './public/**/*.html',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -7,7 +6,12 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Rubik'],
+        serif: ['Rubik'],
+      },
+    },
   },
   variants: {
     extend: {},
