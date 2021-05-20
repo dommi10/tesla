@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Image from 'next/image';
+import classNames from 'classnames';
 
 const images = [
   [
@@ -9,6 +10,7 @@ const images = [
     '/images/image03.jpg',
     '/images/image04.jpg',
     '/images/image05.jpg',
+    '/images/image06.jpg',
   ],
   [
     '/images/image1.jpg',
@@ -16,14 +18,17 @@ const images = [
     '/images/image3.jpg',
     '/images/image4.jpg',
     '/images/image5.jpg',
+    '/images/image6.jpg',
   ],
 ];
 
 export default function Home() {
-  const [{ activeColor, activeImage }, setactiveImage] = useState({
+  const [state, setactiveImage] = useState({
     activeColor: 0,
     activeImage: 0,
+    activeWheel: 0,
   });
+  const { activeColor, activeImage, activeWheel } = state;
   return (
     <div className='bg-white min-h-full min-w-full flex flex-col '>
       <Head>
@@ -65,9 +70,9 @@ export default function Home() {
         </div>
       </div>
       {/* body */}
-      <div className='p-2 mt-8'>
+      <div className=' mt-8'>
         {/* hero image */}
-        <div style={{ height: '150px', position: 'relative', width: '100%' }}>
+        <div className='relative   h-60 w-full '>
           <Image
             src={images[activeColor][activeImage]}
             alt='Picture of presentation'
@@ -176,6 +181,181 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+          {/* paint */}
+          <div className='mt-8 flex flex-col w-full justify-items-center items-center'>
+            <div className='relative   h-60 w-full '>
+              <Image
+                src={images[activeColor][activeImage]}
+                alt='Picture of presentation'
+                layout='fill'
+                objectFit='none'
+                quality={100}
+              />
+            </div>
+            <h3 className='text-2xl font-semibold'>Paint</h3>
+            <div className='mt-8 flex w-full justify-center items-center'>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setactiveImage({ ...state, activeColor: 0, activeImage: 0 });
+                }}
+                className={classNames(
+                  'outline-none ml-6 focus:outline-none rounded-full p-1',
+                  {
+                    'ring-4 ring-blue-600': activeColor === 0,
+                  },
+                )}
+              >
+                <div className='rounded-full relative  h-16 w-16'>
+                  <Image
+                    src='/images/Paint_White.png'
+                    alt='Picture of presentation'
+                    layout='fill'
+                    objectFit='none'
+                    quality={100}
+                  />
+                </div>
+              </button>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setactiveImage({ ...state, activeColor: 1, activeImage: 0 });
+                }}
+                className={classNames(
+                  'outline-none ml-6 focus:outline-none rounded-full p-1',
+                  {
+                    'ring-4 ring-blue-600': activeColor === 1,
+                  },
+                )}
+              >
+                <div className='rounded-full relative  h-16 w-16'>
+                  <Image
+                    src='/images/Paint_Red.png'
+                    alt='Picture of presentation'
+                    layout='fill'
+                    objectFit='none'
+                    quality={100}
+                  />
+                </div>
+              </button>
+            </div>
+            <div className='mt-6 flex flex-col items-center justify-items-center w-full mb-8'>
+              <h3 className='text-sm font-semibold tracking-wide'>
+                {activeColor === 0
+                  ? 'Pearl White Multi-Coat'
+                  : 'Red Multi-Coat'}
+              </h3>
+              <h3 className='mt-2 text-sm text-gray-400 font-medium tracking-wide'>
+                {activeColor === 0 ? 'Included' : '$2,600'}
+              </h3>
+            </div>
+            <div className='relative   h-60 w-full '>
+              <Image
+                src={images[activeColor][activeWheel === 0 ? 3 : 5]}
+                alt='Picture of presentation'
+                layout='fill'
+                objectFit='none'
+                quality={100}
+              />
+            </div>
+            <h3 className='mt-6 text-2xl font-semibold'>Wheels</h3>
+            <div className='mt-8 flex w-full justify-center items-center'>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setactiveImage({ ...state, activeWheel: 0 });
+                }}
+                className={classNames(
+                  'outline-none ml-6 focus:outline-none rounded-full p-1',
+                  {
+                    'ring-4 ring-blue-600': activeWheel === 0,
+                  },
+                )}
+              >
+                <div className='rounded-full relative  h-20 w-20'>
+                  <Image
+                    src='/images/type0.png'
+                    alt='Picture of presentation'
+                    layout='fill'
+                    objectFit='none'
+                    quality={100}
+                  />
+                </div>
+              </button>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setactiveImage({ ...state, activeWheel: 1 });
+                }}
+                className={classNames(
+                  'outline-none ml-6 focus:outline-none rounded-full ',
+                  {
+                    'ring-4 ring-blue-600': activeWheel === 1,
+                  },
+                )}
+              >
+                <div className='rounded-full relative   h-20 w-20'>
+                  <Image
+                    src='/images/type1.png'
+                    alt='Picture of presentation'
+                    layout='fill'
+                    objectFit='none'
+                    quality={100}
+                  />
+                </div>
+              </button>
+            </div>
+            <div className='mt-6 flex flex-col items-center justify-items-center w-full mb-8'>
+              <h3 className='text-sm font-semibold tracking-wide'>
+                {activeColor === 0 ? '18" Aero Wheels' : '18" Sport Wheels'}
+              </h3>
+              <h3 className='mt-2 text-sm text-gray-400 font-medium tracking-wide'>
+                {activeColor === 0 ? 'Included' : '$2,000'}
+              </h3>
+            </div>
+            <div className='relative   h-60 w-full '>
+              <Image
+                src='/images/image5.jpg'
+                alt='Picture of presentation'
+                layout='fill'
+                objectFit='none'
+                quality={100}
+              />
+            </div>
+            <div className='flex-col flex w-full justify-items-center items-center'>
+              <h3 className='text-2xl font-semibold'>Interior</h3>
+              <div className='mt-8 flex w-full justify-center items-center'>
+                <button
+                  className={classNames(
+                    'ring-4 ring-blue-600 outline-none ml-6 focus:outline-none rounded-full p-1',
+                  )}
+                >
+                  <div className='rounded-full relative  h-16 w-16'>
+                    <Image
+                      src='/images/Paint_White.png'
+                      alt='Picture of presentation'
+                      layout='fill'
+                      objectFit='none'
+                      quality={100}
+                    />
+                  </div>
+                </button>
+              </div>
+              <div className='mt-8 flex flex-col items-center justify-items-center w-full mb-8'>
+                <h3 className='text-sm font-semibold tracking-wide'>
+                  All Black
+                </h3>
+                <h3 className='mt-2 text-sm text-gray-400 font-medium tracking-wide'>
+                  Included
+                </h3>
+              </div>
+            </div>
+            <div className='rounded-full text-gray-600 tracking-widest p-2 bg-gray-100 mt-2 font-semibold'>
+              <h3>FEATURE DETAILS</h3>
+            </div>
+            {/* summary */}
+            <div></div>
           </div>
         </div>
       </div>
