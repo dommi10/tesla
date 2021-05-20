@@ -30,13 +30,13 @@ export default function Home() {
   });
   const { activeColor, activeImage, activeWheel } = state;
   return (
-    <div className='bg-white min-h-full min-w-full flex flex-col '>
+    <div className='flex flex-col min-w-full min-h-full bg-white '>
       <Head>
         <title>Design Your Model 3 | Tesla</title>
       </Head>
       {/* header */}
-      <div className='h-3 pl-2  pr-6 pt-6 w-full flex justify-items-center justify-between'>
-        <div className='h-full w-2/4'>
+      <div className='flex justify-between w-full h-3 pt-6 pl-2 pr-6 justify-items-center'>
+        <div className='w-2/4 h-full'>
           <svg
             viewBox='0 0 342 35'
             xmlns='http://www.w3.org/2000/svg'
@@ -46,9 +46,9 @@ export default function Home() {
           </svg>
         </div>
         {/* Langage section */}
-        <div className='flex justify-items-center text-gray-400'>
+        <div className='flex text-gray-400 justify-items-center'>
           {/* logo */}
-          <div className='h-full w-6'>
+          <div className='w-6 h-full'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
@@ -65,14 +65,14 @@ export default function Home() {
           </div>
           {/* Country Image */}
           <div>
-            <h6 className='font-bold pl-1'>CD</h6>
+            <h6 className='pl-1 font-bold'>CD</h6>
           </div>
         </div>
       </div>
       {/* body */}
-      <div className=' mt-8'>
+      <div className='mt-8 '>
         {/* hero image */}
-        <div className='relative   h-60 w-full '>
+        <div className='relative w-full h-60 '>
           <Image
             src={images[activeColor][activeImage]}
             alt='Picture of presentation'
@@ -82,109 +82,109 @@ export default function Home() {
           />
         </div>
         {/* Text Presentation */}
-        <div className='mt-6 w-full flex flex-col'>
+        <div className='flex flex-col w-full mt-6'>
           {/* car name and puchase */}
-          <div className='flex flex-col w-full justify-center items-center justify-items-center'>
-            <div className='flex flex-col w-full justify-center items-center justify-items-center'>
-              <h1 className='tracking-tight font-medium text-3xl'>Model 3</h1>
-              <h3 className='pt-2 text-gray-500  text-base'>
+          <div className='flex flex-col items-center justify-center w-full justify-items-center'>
+            <div className='flex flex-col items-center justify-center w-full justify-items-center'>
+              <h1 className='text-3xl font-medium tracking-tight'>Model 3</h1>
+              <h3 className='pt-2 text-base text-gray-500'>
                 Estimated Delivery: 4-11 weeks
               </h3>
             </div>
             <div className='bg-gray-200 bg-opacity-60 py-1.5 pl-2 rounded-full h-12 mt-4 flex justify-between justify-items-center  w-11/12 '>
-              <div className='h-full flex justify-center items-center w-1/2 bg-white rounded-full shadow-md'>
-                <h6 className='text-gray-500 tracking-wider text-xs font-semibold'>
+              <div className='flex items-center justify-center w-1/2 h-full bg-white rounded-full shadow-md'>
+                <h6 className='text-xs font-semibold tracking-wider text-gray-500'>
                   Purchase Price
                 </h6>
               </div>
-              <div className='h-full flex justify-center items-center w-1/2 '>
-                <h6 className='text-gray-500 tracking-widest text-xs font-semibold'>
+              <div className='flex items-center justify-center w-1/2 h-full '>
+                <h6 className='text-xs font-semibold tracking-widest text-gray-500'>
                   Potential savings*
                 </h6>
               </div>
             </div>
           </div>
           {/* kilometers */}
-          <div className='grid mb-10 grid-cols-3 gap-6 h-4 w-full mt-10 px-8'>
+          <div className='grid w-full h-4 grid-cols-3 gap-6 px-8 mt-10 mb-10'>
             <div className='grid grid-rows-2 gap-1'>
-              <div className='flex justify-items-center items-center justify-center'>
-                <h2 className='font-semibold text-3xl'>423</h2>
+              <div className='flex items-center justify-center justify-items-center'>
+                <h2 className='text-3xl font-semibold'>423</h2>
                 <h6 className='font-medium'>km</h6>
               </div>
               <div className='flex justify-center '>
-                <h6 className='text-sm text-gray-400 font-thin'>
+                <h6 className='text-sm font-thin text-gray-400'>
                   Range (est. )
                 </h6>
               </div>
             </div>
             <div className='grid grid-rows-2 gap-1'>
-              <div className='flex justify-items-center items-center justify-center'>
-                <h2 className='font-semibold text-3xl'>225</h2>
+              <div className='flex items-center justify-center justify-items-center'>
+                <h2 className='text-3xl font-semibold'>225</h2>
                 <h6 className='font-medium'>km/h</h6>
               </div>
               <div className='flex justify-center '>
-                <h6 className='text-sm text-gray-400 font-thin'>Top Speed</h6>
+                <h6 className='text-sm font-thin text-gray-400'>Top Speed</h6>
               </div>
             </div>
             <div className='grid grid-rows-2 gap-1'>
-              <div className='flex justify-items-center items-center justify-center'>
-                <h2 className='font-semibold text-3xl'>5.6</h2>
+              <div className='flex items-center justify-center justify-items-center'>
+                <h2 className='text-3xl font-semibold'>5.6</h2>
                 <h6 className='font-medium'>s</h6>
               </div>
               <div className='flex justify-center '>
-                <h6 className='text-sm text-gray-400 font-thin'>0-100 km/h</h6>
+                <h6 className='text-sm font-thin text-gray-400'>0-100 km/h</h6>
               </div>
             </div>
           </div>
           {/* prices */}
 
-          <div className='flex mt-14 pl-4 pr-2 w-full flex-col'>
+          <div className='flex flex-col w-full pl-4 pr-2 mt-14'>
             <div className='flex flex-col'>
-              <h3 className='text-gray-400 font-medium'>Rear-Wheel Drive</h3>
-              <div className='flex font-semibold text-sm opacity-90 align-center  justify-between py-4 px-6 mt-4 ring ring-blue-500 rounded-full'>
+              <h3 className='font-medium text-gray-400'>Rear-Wheel Drive</h3>
+              <div className='flex justify-between px-6 py-4 mt-4 text-sm font-semibold rounded-full opacity-90 align-center ring ring-blue-500'>
                 <h6>Standard Range Plus</h6>
                 <h6>$52,990</h6>
               </div>
-              <div className='mt-4 w-full text-sm text-gray-400 font-medium flex'>
+              <div className='flex w-full mt-4 text-sm font-medium text-gray-400'>
                 <a href='/' className='underline'>
                   Learn more
                 </a>
                 <h3 className='pl-1'>about Range and Perfomance</h3>
               </div>
-              <div className='mt-4 flex'>
+              <div className='flex mt-4'>
                 <input type='checkbox' className='p-3 rounded-md' />
-                <h3 className='pl-3 text-gray-500 font-medium'>
+                <h3 className='pl-3 font-medium text-gray-500'>
                   Limit to 151 km range (est.)
                 </h3>
               </div>
-              <h3 className='text-gray-500 font-medium mt-6'>
+              <h3 className='mt-6 font-medium text-gray-500'>
                 Dual Motor All-Wheel Drive
               </h3>
-              <div className='flex font-semibold text-sm text-gray-500 align-center  justify-between py-4 px-6 mt-4 border border-gray-400 rounded-full'>
+              <div className='flex justify-between px-6 py-4 mt-4 text-sm font-semibold text-gray-500 border border-gray-400 rounded-full align-center'>
                 <h6>Long Range</h6>
                 <h6>$64,990</h6>
               </div>
-              <div className='flex font-semibold text-sm text-gray-500 align-center  justify-between py-4 px-6 mt-4 border border-gray-400 rounded-full'>
+              <div className='flex justify-between px-6 py-4 mt-4 text-sm font-semibold text-gray-500 border border-gray-400 rounded-full align-center'>
                 <h6>Performance</h6>
                 <h6>$74,990</h6>
               </div>
-              <div className='flex flex-col w-full text-sm items-center justify-center'>
+              <div className='flex flex-col items-center justify-center w-full text-sm'>
                 <h3 className='mt-4 text-xs text-center text-gray-400'>
                   All prices are shown without potential incentives or savings
                   of $11,700
                 </h3>
-                <a href='/' className='underline text-gray-500'>
+                <a href='/' className='text-gray-500 underline'>
                   Learn More
                 </a>
-                <div className='rounded-full text-gray-600 tracking-widest p-2 bg-gray-100 mt-4 font-semibold'>
+                <div className='p-2 mt-4 font-semibold tracking-widest text-gray-600 bg-gray-100 rounded-full'>
                   <h3>FEATURE DETAILS</h3>
                 </div>
               </div>
             </div>
           </div>
           {/* paint */}
-          <div className='mt-8 flex flex-col w-full justify-items-center items-center'>
-            <div className='relative   h-60 w-full '>
+          <div className='flex flex-col items-center w-full mt-8 justify-items-center'>
+            <div className='relative w-full h-60 '>
               <Image
                 src={images[activeColor][activeImage]}
                 alt='Picture of presentation'
@@ -194,7 +194,7 @@ export default function Home() {
               />
             </div>
             <h3 className='text-2xl font-semibold'>Paint</h3>
-            <div className='mt-8 flex w-full justify-center items-center'>
+            <div className='flex items-center justify-center w-full mt-8'>
               <button
                 onClick={(e) => {
                   e.preventDefault();
@@ -207,7 +207,7 @@ export default function Home() {
                   },
                 )}
               >
-                <div className='rounded-full relative  h-16 w-16'>
+                <div className='relative w-16 h-16 rounded-full'>
                   <Image
                     src='/images/Paint_White.png'
                     alt='Picture of presentation'
@@ -229,7 +229,7 @@ export default function Home() {
                   },
                 )}
               >
-                <div className='rounded-full relative  h-16 w-16'>
+                <div className='relative w-16 h-16 rounded-full'>
                   <Image
                     src='/images/Paint_Red.png'
                     alt='Picture of presentation'
@@ -240,17 +240,17 @@ export default function Home() {
                 </div>
               </button>
             </div>
-            <div className='mt-6 flex flex-col items-center justify-items-center w-full mb-8'>
+            <div className='flex flex-col items-center w-full mt-6 mb-8 justify-items-center'>
               <h3 className='text-sm font-semibold tracking-wide'>
                 {activeColor === 0
                   ? 'Pearl White Multi-Coat'
                   : 'Red Multi-Coat'}
               </h3>
-              <h3 className='mt-2 text-sm text-gray-400 font-medium tracking-wide'>
+              <h3 className='mt-2 text-sm font-medium tracking-wide text-gray-400'>
                 {activeColor === 0 ? 'Included' : '$2,600'}
               </h3>
             </div>
-            <div className='relative   h-60 w-full '>
+            <div className='relative w-full h-60 '>
               <Image
                 src={images[activeColor][activeWheel === 0 ? 3 : 5]}
                 alt='Picture of presentation'
@@ -260,7 +260,7 @@ export default function Home() {
               />
             </div>
             <h3 className='mt-6 text-2xl font-semibold'>Wheels</h3>
-            <div className='mt-8 flex w-full justify-center items-center'>
+            <div className='flex items-center justify-center w-full mt-8'>
               <button
                 onClick={(e) => {
                   e.preventDefault();
@@ -273,7 +273,7 @@ export default function Home() {
                   },
                 )}
               >
-                <div className='rounded-full relative  h-20 w-20'>
+                <div className='relative w-20 h-20 rounded-full'>
                   <Image
                     src='/images/type0.png'
                     alt='Picture of presentation'
@@ -295,7 +295,7 @@ export default function Home() {
                   },
                 )}
               >
-                <div className='rounded-full relative   h-20 w-20'>
+                <div className='relative w-20 h-20 rounded-full'>
                   <Image
                     src='/images/type1.png'
                     alt='Picture of presentation'
@@ -306,15 +306,15 @@ export default function Home() {
                 </div>
               </button>
             </div>
-            <div className='mt-6 flex flex-col items-center justify-items-center w-full mb-8'>
+            <div className='flex flex-col items-center w-full mt-6 mb-8 justify-items-center'>
               <h3 className='text-sm font-semibold tracking-wide'>
                 {activeColor === 0 ? '18" Aero Wheels' : '18" Sport Wheels'}
               </h3>
-              <h3 className='mt-2 text-sm text-gray-400 font-medium tracking-wide'>
+              <h3 className='mt-2 text-sm font-medium tracking-wide text-gray-400'>
                 {activeColor === 0 ? 'Included' : '$2,000'}
               </h3>
             </div>
-            <div className='relative   h-60 w-full '>
+            <div className='relative w-full h-60 '>
               <Image
                 src='/images/image5.jpg'
                 alt='Picture of presentation'
@@ -323,15 +323,15 @@ export default function Home() {
                 quality={100}
               />
             </div>
-            <div className='flex-col flex w-full justify-items-center items-center'>
+            <div className='flex flex-col items-center w-full justify-items-center'>
               <h3 className='text-2xl font-semibold'>Interior</h3>
-              <div className='mt-8 flex w-full justify-center items-center'>
+              <div className='flex items-center justify-center w-full mt-8'>
                 <button
                   className={classNames(
                     'ring-4 ring-blue-600 outline-none ml-6 focus:outline-none rounded-full p-1',
                   )}
                 >
-                  <div className='rounded-full relative  h-16 w-16'>
+                  <div className='relative w-16 h-16 rounded-full'>
                     <Image
                       src='/images/Paint_White.png'
                       alt='Picture of presentation'
@@ -342,30 +342,30 @@ export default function Home() {
                   </div>
                 </button>
               </div>
-              <div className='mt-8 flex flex-col items-center justify-items-center w-full mb-8'>
+              <div className='flex flex-col items-center w-full mt-8 mb-8 justify-items-center'>
                 <h3 className='text-sm font-semibold tracking-wide'>
                   All Black
                 </h3>
-                <h3 className='mt-2 text-sm text-gray-400 font-medium tracking-wide'>
+                <h3 className='mt-2 text-sm font-medium tracking-wide text-gray-400'>
                   Included
                 </h3>
               </div>
             </div>
-            <div className='rounded-full text-gray-600 tracking-widest p-2 bg-gray-100 mt-2 font-semibold'>
+            <div className='p-2 mt-2 font-semibold tracking-widest text-gray-600 bg-gray-100 rounded-full'>
               <h3>FEATURE DETAILS</h3>
             </div>
           </div>
         </div>
         {/* summary */}
-        <div className='mt-6 px-4  w-full'>
+        <div className='w-full px-4 mt-6'>
           <h6>Summon</h6>
           <div className='mt-6 '>
-            <h6 className='font-semibold text-2xl tracking-wide'>
+            <h6 className='text-2xl font-semibold tracking-wide'>
               Full Self-Driving Capability
             </h6>
-            <h6 className='text-center mt-1'>$10,600</h6>
+            <h6 className='mt-1 text-center'>$10,600</h6>
           </div>
-          <ul className='px-6 lit-inside list-disc mt-4 text-gray-500 text-sm tracking-wide'>
+          <ul className='px-6 mt-4 text-sm tracking-wide text-gray-500 list-disc lit-inside'>
             <li className='p-1'>Navigate on Autopilot</li>
             <li className='p-1'>Auto Lane Change</li>
             <li className='p-1'>Autopark</li>
@@ -374,11 +374,11 @@ export default function Home() {
             <li className='p-1'>Traffic Light and Stop Sign Control</li>
           </ul>
           <div className='mt-6'>
-            <h5 className=' mb-4'>Comming later this year</h5>
-            <ul className='px-6 lit-inside list-disc mt-4 text-gray-500 text-sm tracking-wide'>
+            <h5 className='mb-4 '>Comming later this year</h5>
+            <ul className='px-6 mt-4 text-sm tracking-wide text-gray-500 list-disc lit-inside'>
               <li className='p-1'>Autosteer on city streets</li>
             </ul>
-            <span className='mt-6 text-xs text-gray-500 text-justify'>
+            <span className='mt-6 text-xs text-justify text-gray-500'>
               The currently enabled features require active driver supervision
               and do not make the vehicle autonomous. The activation and use of
               these features are dependent on achieving reliability far in
@@ -388,30 +388,30 @@ export default function Home() {
               car will be continuously upgraded through over-the-air software
               updates.
             </span>
-            <div className='mt-6 flex w-full justify-between'>
-              <div className=' bg-blue-700 text-white rounded-full h-6 pt-4 pb-8 flex justify-center  w-2/4'>
+            <div className='flex justify-between w-full mt-6'>
+              <div className='flex justify-center w-2/4 h-6 pt-4 pb-8 text-white bg-blue-700 rounded-full '>
                 <h5>ADD</h5>
               </div>
-              <div className='h-6 pt-4 pb-8 bg-gray-200 ml-4  rounded-full  flex justify-center  w-2/4'>
+              <div className='flex justify-center w-2/4 h-6 pt-4 pb-8 ml-4 bg-gray-200 rounded-full'>
                 <h5>FEATURE DETAILS</h5>
               </div>
             </div>
-            <div className='mt-12 pb-32'>
-              <h5 className='text-center font-semibold text-2xl'>
+            <div className='pb-32 mt-12'>
+              <h5 className='text-2xl font-semibold text-center'>
                 Order Your Model 3
               </h5>
-              <h6 className='text-center mt-2 text-sm font-medium'>
+              <h6 className='mt-2 text-sm font-medium text-center'>
                 Estimated Delivery: 4-11 Weeks
               </h6>
-              <div className='h-6 pt-4 pb-8 text-sm bg-blue-700 mt-4 text-white rounded-full  flex justify-center  w-full tracking-wide'>
+              <div className='flex justify-center w-full h-6 pt-4 pb-8 mt-4 text-sm tracking-wide text-white bg-blue-700 rounded-full'>
                 <h5>CONTINUE TO PAYMENT</h5>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className='bg-gray-100 rounded-t-2xl flex   px-4 pt-4 h-16 fixed bottom-0 w-full'>
-        <div className='bg-white w-8 h-8 px-2 rounded-full shadow-md '>
+      <div className='fixed bottom-0 flex w-full h-16 px-4 pt-4 bg-gray-100 rounded-t-2xl'>
+        <div className='w-8 h-8 px-2 bg-white rounded-full shadow-md '>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='w-full h-full'
@@ -427,7 +427,7 @@ export default function Home() {
             />
           </svg>
         </div>
-        <div className='flex-1 ml-2 text-sm mb-6 '>
+        <div className='flex-1 mb-6 ml-2 text-sm '>
           <h5 className='text-center'>$57,590 Purchase price</h5>
           <h5 className='text-center text-gray-500'>
             $11,700 Potential savings over 6 years
